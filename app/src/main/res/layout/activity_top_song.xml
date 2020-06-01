@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08185B"
+    tools:context=".TopSong">
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2539248100963587~6006674108">
+    </com.google.android.gms.ads.AdView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Anbu!?Quiz"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/answerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:text="Correct"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/quizzSubjectTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#272B39"
+            android:text="Top 50 Song Titles?!"
+            android:textColor="#FAFAFA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/questionTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#08185B"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/userAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Spell Correct Title?"
+            android:inputType="textPersonName"
+            android:textColor="#F6F5F5"
+            android:textColorHint="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/hintButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="songHint"
+            android:text="Hint?" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="nextTitle"
+            android:text="Next!" />
+
+        <Button
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="checkAnswer"
+            android:text="Check!?" />
+    </LinearLayout>
+
+</RelativeLayout>

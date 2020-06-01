@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E05B"
+    tools:context=".TopAnime">
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2539248100963587~6006674108">
+    </com.google.android.gms.ads.AdView>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/animeAnbuQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Anbu!?Quiz"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/animeANswerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:text="Correct"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/animeQuizSubjectTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5E5E45"
+            android:text="Top Anime!?"
+            android:textColor="#E0E05B"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/animeQuestionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0E05B"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/animeUserAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Spell correct Title!?"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/animeHintButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="animeHint"
+            android:text="Hint?" />
+
+        <Button
+            android:id="@+id/animeNextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="nextAnime"
+            android:text="Next!" />
+
+        <Button
+            android:id="@+id/animeCheckButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="animeAnswer"
+            android:text="Check!?" />
+    </LinearLayout>
+
+</RelativeLayout>

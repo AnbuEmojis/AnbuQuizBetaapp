@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#050101"
+        android:gravity="center"
+        android:text="Anbu!?Quiz"
+        android:textColor="#E05B00"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:id="@+id/anbuGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E05B00"
+            android:onClick="alltimeactivity"
+            android:text="Top 50 Song Titles" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E05B00"
+            android:onClick="topanime"
+            android:text="Top Animes" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E05B00"
+            android:onClick="topcities"
+            android:text="Top 25 Cities" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E05B00"
+            android:onClick="topcars"
+            android:text="Top Cars" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/aESNavBar"
+        android:alpha="0.3"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/mainbackground" />
+
+    <FrameLayout
+        android:id="@+id/anbuFrame"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="275dp">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/aESNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E05B00"
+        app:menu="@menu/aesnavbar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

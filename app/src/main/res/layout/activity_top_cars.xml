@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopCars">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="carHint"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2539248100963587~6006674108"></com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C700E0E0"
+        android:orientation="vertical"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/carAnbuQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Anbu!?Quiz"
+        android:textSize="36sp"/>
+
+    <TextView
+        android:id="@+id/carAnswerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:text="Correct"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/carSubjectTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#435C5C"
+            android:text="Top Cars?!"
+            android:textColor="#00FFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/carQuestionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFF"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/carUserAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Spell Correct Car Brand?"
+            android:inputType="textPersonName"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/carHintButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="carHint"
+            android:text="Hint?" />
+
+        <Button
+            android:id="@+id/carNextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="nextBrand"
+            android:text="Next!" />
+
+        <Button
+            android:id="@+id/carCheckButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="checkAnswer"
+            android:text="Check!?" />
+    </LinearLayout>
+
+</RelativeLayout>
