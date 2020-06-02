@@ -31,7 +31,7 @@ class TopSong : AppCompatActivity() {
         setContentView(R.layout.activity_top_song)
 
         MobileAds.initialize(this) {}
-        mAdView = findViewById(R.id.adView)
+        mAdView = findViewById(R.id.adRView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
 

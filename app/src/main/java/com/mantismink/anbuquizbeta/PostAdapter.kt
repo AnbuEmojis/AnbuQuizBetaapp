@@ -21,6 +21,7 @@ class PostAdapter(data:ArrayList<PostClass>, var context:Context) : RecyclerView
 
     class ViewHolder(item:View) : RecyclerView.ViewHolder(item) {
 
+
         var postTitle:TextView
         var postImage:ImageView
         var post:TextView
