@@ -37,7 +37,6 @@ class TopAnime : AppCompatActivity() {
         question = findViewById(R.id.animeQuestionTextView)
         userInput = findViewById(R.id.animeUserAnswer)
 
-
         startQuiz()
     }
     fun startQuiz() {
@@ -79,11 +78,9 @@ class TopAnime : AppCompatActivity() {
             Toast.makeText(this, "Please spell the correct answer, when ready", Toast.LENGTH_LONG).show()
         }
     }
-
     fun nextAnime(view: View){
         startQuiz()
     }
-
     fun randomLetters(word: String): String {
 
         val characters: CharArray = word.toCharArray()
@@ -95,7 +92,6 @@ class TopAnime : AppCompatActivity() {
         }
         return String(characters)
     }
-
     override fun onBackPressed() {
         super.onBackPressed()
 
